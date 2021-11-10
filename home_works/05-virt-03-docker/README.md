@@ -178,7 +178,7 @@ f09e8b7110ac   centos      "/bin/bash"   22 minutes ago   Up 22 minutes         
 >root@0b4afc6991a2:/# **ls /data**
 testfile.txt  testfile1.txt
 
-## Задача 4 (*)
+## Задача 4 (*) 
 
 Воспроизвести практическую часть лекции самостоятельно.
 
