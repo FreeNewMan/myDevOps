@@ -11,6 +11,7 @@
 - создайте свой fork образа;
   >Ответ:
   **docker pull nginx**
+
   Using default tag: latest
 latest: Pulling from library/nginx
 b380bbd43752: Pull complete 
@@ -154,7 +155,9 @@ e81bff2725db: Pushed
   
 >Ответ
 **docker pull centos**
+
 **docker pull debian:10**
+
 vagrant@server1:~$ docker image list
 REPOSITORY       TAG       IMAGE ID       CREATED        SIZE
 debian       10        2b6f409b1d24   4 weeks ago   114MB
@@ -162,6 +165,7 @@ centos       latest    5d0da3dc9764   8 weeks ago   231MB
 
 
 >**docker run --rm -ti -v /data:/data -d centos**
+
 >**docker run --rm -ti -v /data:/data -d debian:10**
 
 >root@devuser-virtual-machine:/data# **sudo docker ps**
@@ -178,7 +182,7 @@ f09e8b7110ac   centos      "/bin/bash"   22 minutes ago   Up 22 minutes         
 >root@0b4afc6991a2:/# **ls /data**
 testfile.txt  testfile1.txt
 
-## Задача 4 (*) 
+## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
 
