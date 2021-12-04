@@ -85,7 +85,8 @@ TO test_simple_user;***
 
 Приведите:
 - итоговый список БД после выполнения пунктов выше,
->test_db=# \l
+```
+test_db=# \l
                              List of databases
    Name    | Owner | Encoding |  Collate   |   Ctype    | Access privileges 
 -----------+-------+----------+------------+------------+-------------------
@@ -96,8 +97,10 @@ TO test_simple_user;***
  template1 | admin | UTF8     | en_US.utf8 | en_US.utf8 | =c/admin         +
            |       |          |            |            | admin=CTc/admin
  test_db   | admin | UTF8     | en_US.utf8 | en_US.utf8 | 
+```
 - описание таблиц (describe)
->***test_db=# \d orders***
+```
+test_db=# \d orders
                                  Table "public.orders"
  Column |       Type        | Collation | Nullable |              Default               
 --------+-------------------+-----------+----------+------------------------------------
@@ -108,7 +111,9 @@ Indexes:
     "orders_pkey" PRIMARY KEY, btree (id)
 Referenced by:
     TABLE "clients" CONSTRAINT "clients_order_id_fkey" FOREIGN KEY (order_id) REFERENCES orders(id)
-***test_db=# \d clients***
+```
+```
+test_db=# \d clients
                                   Table "public.clients"
   Column  |       Type        | Collation | Nullable |               Default               
 ----------+-------------------+-----------+----------+-------------------------------------
@@ -121,7 +126,7 @@ Indexes:
     "idx_client_country" btree (country)
 Foreign-key constraints:
     "clients_order_id_fkey" FOREIGN KEY (order_id) REFERENCES orders(id)
-
+```
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
 ```
 test_db=# SELECT distinct  grantee                                       
@@ -404,8 +409,6 @@ create user test_admin_user with password '1';
 ```
 sudo psql -h 192.168.186.132 -p 5433 -U admin  test_db < ./backup/test_db.sql
 ```
-
-
 
 ---
 
