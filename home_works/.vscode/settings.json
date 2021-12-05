@@ -1,0 +1,30 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.186.132",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "test_db",
+            "database": "test_db",
+            "username": "admin"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.186.132",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "test_db",
+            "database": "test_db",
+            "username": "admin",
+            "password": "admin"
+        }
+    ]
+}
