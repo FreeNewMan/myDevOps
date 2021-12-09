@@ -1,0 +1,23 @@
+version: '3.1'
+networks:
+  db_network:
+    driver: bridge
+services:
+  pg_db2:
+    image: postgres:13
+    container_name: testpg13
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=admin 
+      - POSTGRES_USER=admin
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./backup:/backup
+    networks:
+      - db_network
+    ports:
+      - 5434:5432
+
+
+
+
