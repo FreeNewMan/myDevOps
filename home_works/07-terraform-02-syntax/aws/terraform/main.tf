@@ -22,7 +22,7 @@ variable "ubuntu_account_number" {
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
-  cpu_core_count = 1
+
   tags = {
     Name = "HelloWorld"
   }
